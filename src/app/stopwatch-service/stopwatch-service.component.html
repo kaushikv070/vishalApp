@@ -1,0 +1,21 @@
+<!-- <input type="text" #counterInput> -->
+<div class="outer"><p style="color:red; font-size:50px;text-align: center;" #counter></p> 
+    <input type="number" #inputCount>
+    <button  [disabled]="isStarted" (click)='startCounter()'> start</button>
+    <button (click)='pauseCounter()'> pause</button>
+    <button (click)='resetCounter()'> reset</button>
+    <p> startCount:{{startedCount}}</p>
+    <p> pauseCount:{{pausedCount}}</p>
+</div>
+
+<div *ngIf='timeArray'>
+<div class="inner" *ngFor='let time of timeArray'>
+
+    <p>{{time.action}}  {{time.time}}</p>
+    <div class="inner">
+    <p *ngIf='time.startedValue'>started at {{time.startedValue}}</p>
+    <p *ngIf='time.pausedValue'>paused at {{time.pausedValue}}</p>
+</div>
+</div>
+</div>
+

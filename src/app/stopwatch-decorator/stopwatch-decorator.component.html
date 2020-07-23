@@ -1,0 +1,40 @@
+
+<!-- <div class="component1"> -->
+<!-- <div class="component1" >
+<app-watch-counter [counterValue]="counterValue" [started]="started" 
+[paused]="paused" (counterTracker)='emitCount($event)' [reset]='reset'></app-watch-counter>
+</div>
+<div class="pull-right component2">
+<app-watch-input (countEvent)='display($event)' [count]="count" 
+[action]="action" [reset]='reset'></app-watch-input>
+<app-watch-timer [startClick]="startClick" [pausedClick]="pausedClick"></app-watch-timer>
+</div>
+
+
+<div class="component3">
+<app-watch-logging 
+*ngFor='let times of timeArray' [timeArray]="[times]">
+</app-watch-logging>
+</div> -->
+
+
+<div class="cell border margin">
+    <div class="row1">
+        <div class="left border">
+            <app-watch-counter [counterValue]="counterValue" [started]="started" 
+            [paused]="paused" (counterTracker)='emitCount($event)' [reset]='reset'></app-watch-counter>
+
+        </div>
+        <div class="right border ml"><app-watch-input (countEvent)='display($event)' [count]="count" 
+            [action]="action" [reset]='reset'></app-watch-input>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="left"><app-watch-logging 
+            *ngFor='let times of timeArray' [timeArray]="[times]">
+            </app-watch-logging>
+        </div>
+        <div class="right"><app-watch-timer [startClick]="startClick" [pausedClick]="pausedClick"></app-watch-timer>
+        </div>
+    </div>
+</div>

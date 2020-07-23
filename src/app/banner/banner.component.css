@@ -1,0 +1,32 @@
+        
+             .container{text-align: center;}
+             .outer{padding:10px;border:1px solid black;}
+             .inner{padding:10px;border:1px solid black;}
+           
+            div.cell8{
+                background: blanchedalmond
+            }
+            div.cell7{
+                background: black
+            }
+            div.cell6{
+                background:blanchedalmond
+            }
+            div.cell5{
+                background: black;
+            }
+            div.cell4{
+                background: blanchedalmond;
+            }
+            div.cell3{
+                background: black;
+            }
+            div.cell2{
+                background: blanchedalmond
+            }
+            div.cell1{
+                background: black;
+            }
+            div.cell0{
+                background: blanchedalmond;
+            }

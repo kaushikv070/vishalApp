@@ -1,0 +1,7 @@
+<div id="content" class="ex1" (scroll)="onScroll($event)">
+    <div class="contentInside" *ngFor="let divData of dataSource;let i = index">
+
+        <button class="btn btn-primary btn-sm custom" (click)='showAlert(i+1)'>click me</button>
+    </div>
+    </div>
+   

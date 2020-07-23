@@ -1,0 +1,17 @@
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+.inner button{ /* You Can Name it what you want*/
+    margin-right:30px;
+    margin-top: 20px;
+    }
+    .inner button:last-child{
+    margin-right:0px;
+    /*so the last one dont push the div thas giving the space only between the inputs*/
+    }

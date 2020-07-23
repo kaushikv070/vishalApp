@@ -1,0 +1,64 @@
+
+ <div class="row upper">
+    <div class="col-lg-8 my-3 ">
+        <div class="pull-right">
+            <div class="btn-group">
+                <button class="btn btn-info"  (click)="flip($event, 'list')">
+                    List View
+                </button>
+                <button class="btn btn-danger"  (click)="flip($event, 'grid')">
+                    Grid View
+                </button>
+            </div>
+        </div>
+    </div>
+    <select (change)='selectChangeHandler($event)'>
+        <option value="null" disabled="true" [selected]="true">price filter </option>
+        <option *ngFor="let option of options" [value]='option.id' > {{option.name}}</option>
+    </select>
+</div> 
+ 
+<div class="main">
+<ng-container [ngSwitch]="mode">
+    <ng-container *ngSwitchCase="'grid'" >
+      
+        <div class="row" >
+            <div class="col-3 col-sm-3 col-md-3 col-lg-3" *ngFor="let item of products | price:selectedPrice">
+                 <p>{{item.category}}</p>
+                <p class="zoom"><img [src]='item.image' height="100"></p>
+                <p>{{item.price}}</p>
+                <p>{{ item.title | truncate:[20] }}</p>
+               
+            </div>
+           </div>
+
+
+      <!-- <div  *ngFor="let item of items">
+        <h1>{{item.header}}</h1>
+        <p>{{item.content}}</p>
+      </div> -->
+    
+    </ng-container>
+    <ng-container *ngSwitchCase="'list'" >
+      
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6"*ngFor="let item of products | price:selectedPrice">
+                <p>{{item.category}}</p>
+               <p class="zoom"><img [src]='item.image' height="100"></p>
+               <p>{{item.price}}</p>
+               <p>{{ item.title | truncate:[20] }}</p>
+            </div>
+            </div>
+          
+           </ng-container>
+     </ng-container>
+
+    </div>
+    
+      
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+    <p style="color: white">please wait...</p>  
+    </ngx-spinner>    
+
+  
